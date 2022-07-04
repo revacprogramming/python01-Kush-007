@@ -8,9 +8,16 @@ while True:
 
     if num == "done":
         break
+    try:
+        num=int(num)
+        if largest is None or largest<num:
+                largest=num
+        if smallest is None or smallest>num:
+                smallest=num
+    except:
+            print("invalid input")
+            continue
 
-    # ...
-
-    print(num)
 
 print("Maximum", largest)
+print("Minimum",smallest)
